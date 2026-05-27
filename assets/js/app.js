@@ -2,12 +2,12 @@
   const lessons=LESSONS[wNum];
   if(!lessons)return'';
   const steps=lessons.map((a,ai)=>{
-    const arr=ai<lessons.length-1?`<div class="wls-arr">â†’</div>`:'';
+    const arr=ai<lessons.length-1?`<div class="wls-arr">→</div>`:'';
     return`<div class="wls-step" onclick="toggleLesson(${wIdx},${ai})"><div class="wls-num" style="background:${uc.hex}">${a.n}</div><div class="wls-name">${a.title}</div><div class="wls-mode">${a.mode}</div></div>${arr}`;
   }).join('');
   const panels=lessons.map((a,ai)=>{
     const items=a.items.length?`<ul class="wls-items">${a.items.map(it=>`<li>${it}</li>`).join('')}</ul>`:'';
-    const links=a.links.length?`<div class="wls-links">${a.links.map(l=>`<a class="wls-link" href="${l.url}" target="_blank" rel="noopener" style="color:${uc.hex};border-color:rgba(${uc.rgb},.3)">${l.label} â†—</a>`).join('')}</div>`:'';
+    const links=a.links.length?`<div class="wls-links">${a.links.map(l=>`<a class="wls-link" href="${l.url}" target="_blank" rel="noopener" style="color:${uc.hex};border-color:rgba(${uc.rgb},.3)">${l.label} ↗</a>`).join('')}</div>`:'';
     const starter=a.starter?`<div class="wls-starter"><span class="wls-slbl">Sentence Starter</span>${a.starter}</div>`:'';
     return`<div class="wls-panel" id="wlp-${wIdx}-${ai}" style="border-left-color:${uc.hex}"><div class="wls-ph"><div class="wls-pnum" style="background:${uc.hex}">${a.n}</div><div class="wls-ptitle">${a.title}</div><div class="wls-pmode">${a.mode}</div></div><p class="wls-desc">${a.desc}</p>${items}${links}${starter}</div>`;
   }).join('');
@@ -55,7 +55,7 @@ function buildCards(){
     card.className='wcard'+(i===0?' vis':'');
     card.id='wc'+i;
     const subj=w.subj.map(s=>`<span class="subj-tag">${s}</span>`).join('');
-    const acts=w.acts.map(a=>`<li><span class="arr" style="color:${uc.hex}">â–¸</span>&nbsp;${a}</li>`).join('');
+    const acts=w.acts.map(a=>`<li><span class="arr" style="color:${uc.hex}">▸</span>&nbsp;${a}</li>`).join('');
     const vocab=w.vocab.map(v=>`<span class="chip" style="background:rgba(${uc.rgb},.08);border-color:rgba(${uc.rgb},.25);color:${uc.hex}">${v}</span>`).join('');
     const lessonStepper=buildLessonStepper(w.w,uc,i);
     card.innerHTML=`
