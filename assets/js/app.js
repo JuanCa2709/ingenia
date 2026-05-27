@@ -1,4 +1,4 @@
-﻿function buildLessonStepper(wNum,uc,wIdx){
+function buildLessonStepper(wNum,uc,wIdx){
   const lessons=LESSONS[wNum];
   if(!lessons)return'';
   const steps=lessons.map((a,ai)=>{

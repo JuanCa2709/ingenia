@@ -1,4 +1,4 @@
-﻿const UC={
+const UC={
   u1:{label:"Unit 1 · Foundations",col:"var(--c1)",rgb:"30,111,255",hex:"#1e6fff"},
   u2:{label:"Unit 2 · Materials, Energy &amp; Water",col:"var(--c2)",rgb:"13,79,207",hex:"#0d4fcf"},
   u3:{label:"Unit 3 · Sustainable Communities",col:"var(--c3)",rgb:"13,27,62",hex:"#0d1b3e"},
